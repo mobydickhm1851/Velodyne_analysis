@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- run velodyne_pointcloud/TransformNodelet in a nodelet manager for an HDL-32E -->
+
+<launch>
+
+<!-- include Velodyne to pointcloud2 launch file -->
+    <include file="./velodyne2pointcloud.launch" />
+        
+<!-- re-publish message type-->        
+    <node pkg="velodynePointcloud" type="scan_sub.py" name="scan_sub_node" output="screen"/>
+
+</launch>
